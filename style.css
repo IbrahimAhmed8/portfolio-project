@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif, "Press Start 2P";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3a6cf4;
+    font-size: 1.1em;
+    font-weight: 610;
+    padding-left: 30px;
+    transition: .1s;
+    border-radius: 10px;
+}
+
+.navigation a:hover {
+    padding: 3px;
+    background-color: lightpink;
+}
+
+.navigation:hover> :not(:hover) {
+    opacity: 20;
+    filter: blur(1px);
+    transform: scale(0.8);
+    cursor: pointer;
+    /* */
+    transform: translate y(-50px);
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(58, 108, 244, 0.2);
+    animation: rotate 5s linear infinite;
+    z-index: -1;
+}
+
+.circle1 {
+    width: 15px;
+    height: 15px;
+    top: -20px;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.circle2 {
+    width: 10px;
+    height: 10px;
+    bottom: -15px;
+    left: 20%;
+    animation-delay: 1s;
+    animation-duration: 6s;
+}
+
+.circle3 {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: -30px;
+    animation-delay: 2s;
+    animation-duration: 7s;
+}
+
+.circle4 {
+    width: 15px;
+    height: 15px;
+    top: 30%;
+    right: -20px;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translateX(40px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    }
+}
+
+/**End Header Section**/
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/blue-smooth-wall-textured-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: "Press Start 2P";
+}
+
+.main h2 span {
+    display: inline-block;
+    /*inline-block << to have width and height while still flowing inline with other elements*/
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    background-color: #3a6cf4;
+    padding: 0.9375em;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    transition: .3s ease-in-out;
+}
+
+.main-btn:hover {
+    background-color: #0a46f6;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.main a:hover {
+    color: lightpink;
+}
+
+.main a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main a:visited:hover {
+    color: lightpink;
+}
+
+/**End Main Section**/
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: #3a6cf4;
+    font-size: 7.5em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background: url(images/blue-smooth-wall-textured-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+.project-card {
+
+    border: 1px;
+    color: #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.8;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.project-info {
+    padding: 1em;
+}
+
+.project-cat {
+    font-size: 0.8em;
+    color: #fff;
+}
+
+strong .project-title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.project-title {
+    text-decoration: none;
+}
+
+.project-title a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-title a:visited:hover {
+    color: lightpink;
+}
+
+/**End Website Projects section**/
+
+.contact .icon {
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.1em;
+}
+
+/**End Website contact section**/
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer {
+    position: relative;
+    background: url(images/blue-smooth-wall-textured-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.footer * {
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons a {
+    color: #fff;
+}
+
+.social-icons a:visited {
+    color: #fff;
+}
+
+.social-icons a:hover {
+    color: lightpink;
+}
+
+.social-icons a:visited:hover {
+    color: lightpink;
+}
+
+.footer .social-icons a {
+    font-size: 1em;
+    padding: 0 12px 0 0;
+}
+
+/**End Footer**/
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .navigation {
+        padding-top: 10px;
+    }
+
+    .navigation a {
+        padding-left: 15px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main h2 span {
+        font-size: 2em;
+    }
+
+    .main h3 {
+        font-size: 1.3em;
+    }
+
+    .card,
+    .project-card {
+        width: 100%;
+    }
+
+    .project-image img {
+        height: 150px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 10px 50px;
+    }
+
+    section {
+        padding: 80px 50px;
+    }
+
+    .card,
+    .project-card {
+        width: 90%;
+    }
+
+    .main h2 span {
+        font-size: 2.5em;
+    }
+
+    .main h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .main h2 span {
+        font-size: 3.5em;
+    }
+
+    .main h3 {
+        font-size: 2.5em;
+    }
+
+    .card,
+    .project-card {
+        width: 25em;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**End Media Queries**/
+/***************************/
+
