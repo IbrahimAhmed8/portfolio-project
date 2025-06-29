@@ -17,6 +17,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!--Header section-->
@@ -56,7 +61,7 @@
     </section>
 
     <!--Website services section-->
-    <section class="cards" id="services">
+    <section class="cards" id="services" data-aos="fade-up" >
       <h2 class="title">Services</h2>
       <div class="content">
         <div class="card">
@@ -103,7 +108,7 @@
 
     <section class="projects" id="projects">
       <h2 class="title">Projects</h2>
-      <div class="content">
+      <div class="content" data-aos="fade-up">
         <div class="project-card">
           <div class="project-image">
             <img src="images/github-mark-white.png" alt="" />
@@ -150,7 +155,7 @@
         </div>
       </div>
     </section>
-    <section class="cards contact" id="contact">
+    <section class="cards contact" id="contact" data-aos="zoom-in">
       <h2 class="title">Let's work together</h2>
       <div class="content">
         <div class="card">
@@ -191,5 +196,13 @@
         ></a>
       </div>
     </footer>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    </script>
   </body>
 </html>
